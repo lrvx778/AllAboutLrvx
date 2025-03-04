@@ -6,15 +6,14 @@
     <title>User Information Form</title>
 </head>
 <body>
-    <form style="border:solid 2px red; padding: 15px;">
+    <form action="http://gophp.w3spaces.com/welcome.php" method="get" style="border:solid 2px red; padding: 15px;">
+	<h2>This is a Survey, Your information will be forwarded to us after submission.</h2>
+
         <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" maxlength="4" required><br><br>
+        <input type="text" id="first-name" name="name" required><br><br>
         
         <label for="last-name">Last Name:</label>
         <input type="text" id="last-name" name="last-name" required><br><br>
-        
-        <label for="address">Address:</label><br>
-        <textarea id="address" name="address" rows="4" cols="30"></textarea><br><br>
         
         <label>Gender:</label><br>
         <input type="radio" id="male" name="gender" value="Male">
@@ -22,6 +21,9 @@
         <input type="radio" id="female" name="gender" value="Female">
         <label for="female">Female</label><br><br>
         
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
         <label>Cities Visited:</label><br>
         <input type="checkbox" id="los-angeles" name="cities" value="Los Angeles">
         <label for="los-angeles">Los Angeles, CA</label><br>
@@ -80,16 +82,10 @@
         <label for="birthdate">Birth Date:</label>
         <input type="date" id="birthdate" name="birthdate"><br><br>
         
-        <label for="color">Favorite Color:</label>
-        <input type="color" id="color" name="color"><br><br>
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favColor" value="#ff0000"><br><br>
         
-        <label for="credit-card">Last Four Digits of Credit Card:</label>
-        <input type="number" id="credit-card" name="quantity" min="0000" max="9999"><br><br>
-        
-        <label for="password">Create a Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        
-        <input type="submit" onclick="alert('Thank you!');" value="Submit">
+        <input type="submit" value="Submit">
         <input type="reset" value="Clear">
     </form>
 </body>
